@@ -14,7 +14,7 @@ const myModel = mongoose.model("Message",{
     message:String
 })
 
-app.use(cors({origin: 'http://localhost:3000'}))
+app.use(cors())
 
 app.get('/',async(req,res)=>{
     const result = await  myModel.find({})
